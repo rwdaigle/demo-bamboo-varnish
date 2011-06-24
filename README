@@ -1,0 +1,12 @@
+# Local deployment (assumes memcache is running)
+
+git clone git://github.com/rwdaigle/demo-bamboo-varnish.git
+cd demo-bamboo-varnish
+bundle install
+foreman start
+
+# Heroku deployment
+
+heroku create --stack bamboo
+git push heroku master
+heroku open
